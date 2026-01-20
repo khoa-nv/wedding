@@ -800,6 +800,14 @@ body.fullscreen-active #sparkle-canvas {
     font-size: 6rem;
     color: var(--text-color);
     text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+.fs-end-screen p {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-style: italic;
+    opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -808,9 +816,7 @@ body.fullscreen-active #sparkle-canvas {
     }
 }
 
-.fs-marquee-content.play {
-    animation: fs-marquee 25s linear 1 forwards;
-}
+
 
 .fs-marquee-content.play {
     animation: fs-marquee 30s linear 1 forwards;
