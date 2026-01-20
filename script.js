@@ -7,9 +7,7 @@ AOS.init({
 const marqueeContainer = document.querySelector(".marquee-container");
 const marqueeContent = document.querySelector(".marquee-content");
 
-// Clone content to ensure seamless scrolling
-const clone = marqueeContent.cloneNode(true);
-marqueeContainer.appendChild(clone);
+
 
 // FALLING PETALS EFFECT
 const canvas = document.getElementById("sparkle-canvas");
