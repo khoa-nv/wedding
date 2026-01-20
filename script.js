@@ -3,22 +3,7 @@ AOS.init({
     once: true,
 });
 
-// Mobile Menu Toggle
-const burger = document.querySelector('.mobile-menu-btn');
-const nav = document.querySelector('.nav-links');
 
-burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    // Simple icon toggle logic
-    const icon = burger.querySelector('i');
-    if(nav.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-    } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    }
-});
 
 // MARQUEE EFFECT - Seamless loop
 const marqueeContainer = document.querySelector('.marquee-container');
@@ -28,12 +13,7 @@ const marqueeContent = document.querySelector('.marquee-content');
 const clone = marqueeContent.cloneNode(true);
 marqueeContainer.appendChild(clone);
 
-gsap.to('.marquee-content', {
-    xPercent: -100,
-    repeat: -1,
-    duration: 30, // Adjust speed
-    ease: "linear"
-}).totalProgress(0.5); // Start halfway to avoid initial jump if any
+
 
 
 // FALLING PETALS EFFECT
