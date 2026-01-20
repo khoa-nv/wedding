@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Celebration</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Allura&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Canvas for Sparkles -->
+    <canvas id="sparkle-canvas"></canvas>
+
+    <div class="main-container">
+        <header data-aos="fade-down" data-aos-duration="1500">
+            <nav>
+                <div class="logo">K & M</div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#wishes">Wishes</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="home" class="hero">
+            <div class="hero-content" data-aos="zoom-in" data-aos-duration="2000">
+                <h1 class="wedding-title">Save the Date</h1>
+                <p class="wedding-date">February 14, 2026</p>
+                <div class="scroll-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Requested Scrolling Text Section -->
+        <div class="marquee-container">
+            <div class="marquee-content">
+                May your love story be as magical and wonderful as a fairytale. Wishing you both a beautiful journey together! &nbsp; ✨ &nbsp; May your love story be as magical and wonderful as a fairytale. Wishing you both a beautiful journey together! &nbsp; ✨
+            </div>
+        </div>
+
+        <section id="gallery" class="gallery-section">
+            <h2 data-aos="fade-up">Captured Moments</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="placeholder-img"></div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="placeholder-img"></div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="placeholder-img"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="wishes" class="message-section">
+            <div class="card glass-card" data-aos="flip-left" data-aos-duration="1500">
+                <i class="fas fa-heart heart-icon"></i>
+                <h3>Forever & Always</h3>
+                <p>"Love is composed of a single soul inhabiting two bodies."</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made with ❤️ for a specialized wedding</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
