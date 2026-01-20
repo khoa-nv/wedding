@@ -165,20 +165,57 @@ if (fullscreenBtn) {
 
   // Update icon on change & Toggle Overlay
   document.addEventListener("fullscreenchange", () => {
+    const marqueeInner = document.querySelector('.fs-marquee-content');
+    const marqueeContainer = document.querySelector('.fs-marquee-container');
+    const endScreen = document.querySelector('.fs-end-screen');
+
     if (document.fullscreenElement) {
       icon.classList.remove("fa-expand");
       icon.classList.add("fa-compress");
+      
       // Show Overlay
       if (overlay) overlay.classList.add("active");
+      
       // Bring petals to front
       document.body.classList.add("fullscreen-active");
+
+      // Reset Animation Sequence
+      if(marqueeInner) {
+         // Reset: Remove class, force reflow, add class
+         marqueeInner.classList.remove('play');
+         void marqueeInner.offsetWidth; /* trigger reflow */
+         marqueeInner.classList.add('play');
+         
+         // Ensure container is visible
+         marqueeContainer.style.opacity = '1';
+         marqueeContainer.style.transition = 'opacity 1s';
+         
+         // Listen for animation end
+         marqueeInner.onanimationend = () => {
+             marqueeContainer.style.opacity = '0'; // Fade out text
+             setTimeout(() => {
+                 if(endScreen) endScreen.classList.add('visible'); // Fade in names
+             }, 1000);
+         };
+      }
+      
+      // Ensure end screen is hidden initially
+      if(endScreen) endScreen.classList.remove('visible');
+
     } else {
       icon.classList.remove("fa-compress");
       icon.classList.add("fa-expand");
+      
       // Hide Overlay
       if (overlay) overlay.classList.remove("active");
+      
       // Reset petals
       document.body.classList.remove("fullscreen-active");
+
+      // Reset States
+      if(endScreen) endScreen.classList.remove('visible');
+      if(marqueeContainer) marqueeContainer.style.opacity = '1';
+      if(marqueeInner) marqueeInner.classList.remove('play');
     }
   });
 
